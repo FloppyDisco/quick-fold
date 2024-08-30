@@ -5,26 +5,28 @@
   "icon": "images/logo.png",
   "description": "QuickFold is a command that shows a quick picker with only fold commands as choices.",
   "repository": "https://github.com/FloppyDisco/quick-fold",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.91.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
-    {
-      "command": "quickFold.showPicker",
-      "title": "Quick Fold"
-    },
-    {
-      "command": "quickFold.select",
-      "title": "Select a quick fold item by keybinding"
-    }
-  ],
+      {
+        "command": "quickFold.showPicker",
+        "title": "Quick Fold"
+      },
+      {
+        "command": "quickFold.select",
+        "title": "Select a quick fold item by keybinding"
+      }
+    ],
     "keybindings": [
       {
         "key": "cmd+e cmd+f",
