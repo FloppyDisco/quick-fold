@@ -1,121 +1,121 @@
 {
-  "name": "QuickFold",
-  "displayName": "QuickFold",
-  "publisher": "bs-code",
-  "icon": "images/logo.png",
-  "description": "QuickFold is a command that shows a quick picker with only fold commands as choices.",
-  "repository": "https://github.com/FloppyDisco/quick-fold",
-  "version": "0.1.1",
-  "engines": {
-    "vscode": "^1.91.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "main": "./extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "quickFold.showPicker",
-        "title": "Quick Fold"
-      },
-      {
-        "command": "quickFold.select",
-        "title": "Select a quick fold item by keybinding"
-      }
+    "name": "QuickFold",
+    "displayName": "QuickFold",
+    "publisher": "bs-code",
+    "icon": "images/logo.png",
+    "description": "QuickFold is a command that shows a quick picker with only fold commands as choices.",
+    "repository": "https://github.com/FloppyDisco/quick-fold",
+    "version": "0.1.1",
+    "engines": {
+        "vscode": "^1.91.0"
+    },
+    "categories": [
+        "Other"
     ],
-    "keybindings": [
-      {
-        "key": "ctrl+e ctrl+f",
-        "command": "quickFold.showPicker",
-        "when": "editorTextFocus && foldingEnabled",
-        "mac": "cmd+e cmd+f",
-        "win": "ctrl+e ctrl+f",
-        "linux": "ctrl+e ctrl+f"
-      },
-      {
-        "key": "ctrl+f",
-        "command": "quickFold.select",
-        "when": "QuickFoldFocused",
-        "args": {
-          "foldCommand": "editor.foldRecursively"
-        },
-        "mac": "cmd+f",
-        "win": "ctrl+f",
-        "linux": "ctrl+f"
-      },
-      {
-        "key": "ctrl+a",
-        "command": "quickFold.select",
-        "when": "QuickFoldFocused",
-        "args": {
-          "foldCommand": "editor.foldAll"
-        },
-        "mac": "cmd+a",
-        "win": "ctrl+a",
-        "linux": "ctrl+a"
-      },
-      {
-        "key": "ctrl+x",
-        "command": "quickFold.select",
-        "when": "QuickFoldFocused",
-        "args": {
-          "foldCommand": "editor.foldAllExcept"
-        },
-        "mac": "cmd+x",
-        "win": "ctrl+x",
-        "linux": "ctrl+x"
-      },
-      {
-        "key": "ctrl+u",
-        "command": "quickFold.select",
-        "when": "QuickFoldFocused",
-        "args": {
-          "foldCommand": "editor.unfoldRecursively"
-        },
-        "mac": "cmd+u",
-        "win": "ctrl+u",
-        "linux": "ctrl+u"
-      },
-      {
-        "key": "ctrl+n",
-        "command": "quickFold.select",
-        "when": "QuickFoldFocused",
-        "args": {
-          "foldCommand": "editor.unfoldAll"
-        },
-        "mac": "cmd+n",
-        "win": "ctrl+n",
-        "linux": "ctrl+n"
-      },
-      {
-        "key": "ctrl+g",
-        "command": "quickFold.select",
-        "when": "QuickFoldFocused",
-        "args": {
-          "foldCommand": "editor.unfoldAllExcept"
-        },
-        "mac": "cmd+g",
-        "win": "ctrl+g",
-        "linux": "ctrl+g"
-      }
-    ]
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "vscode-test"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.91.0",
-    "@types/mocha": "^10.0.7",
-    "@types/node": "20.x",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
-    "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
-  }
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "quickFold.showPicker",
+                "title": "Quick Fold"
+            },
+            {
+                "command": "quickFold.oragamiThatShit",
+                "title": "Used to select a QuickFold choice using a keybinding"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "ctrl+e ctrl+f",
+                "command": "quickFold.showPicker",
+                "when": "editorTextFocus && foldingEnabled",
+                "mac": "cmd+e cmd+f",
+                "win": "ctrl+e ctrl+f",
+                "linux": "ctrl+e ctrl+f"
+            },
+            {
+                "key": "ctrl+f",
+                "command": "quickFold.oragamiThatShit",
+                "when": "LetsMakePaperCranes",
+                "args": {
+                    "foldCommand": "editor.foldRecursively"
+                },
+                "mac": "cmd+f",
+                "win": "ctrl+f",
+                "linux": "ctrl+f"
+            },
+            {
+                "key": "ctrl+a",
+                "command": "quickFold.oragamiThatShit",
+                "when": "LetsMakePaperCranes",
+                "args": {
+                    "foldCommand": "editor.foldAll"
+                },
+                "mac": "cmd+a",
+                "win": "ctrl+a",
+                "linux": "ctrl+a"
+            },
+            {
+                "key": "ctrl+x",
+                "command": "quickFold.oragamiThatShit",
+                "when": "LetsMakePaperCranes",
+                "args": {
+                    "foldCommand": "editor.foldAllExcept"
+                },
+                "mac": "cmd+x",
+                "win": "ctrl+x",
+                "linux": "ctrl+x"
+            },
+            {
+                "key": "ctrl+u",
+                "command": "quickFold.oragamiThatShit",
+                "when": "LetsMakePaperCranes",
+                "args": {
+                    "foldCommand": "editor.unfoldRecursively"
+                },
+                "mac": "cmd+u",
+                "win": "ctrl+u",
+                "linux": "ctrl+u"
+            },
+            {
+                "key": "ctrl+n",
+                "command": "quickFold.oragamiThatShit",
+                "when": "LetsMakePaperCranes",
+                "args": {
+                    "foldCommand": "editor.unfoldAll"
+                },
+                "mac": "cmd+n",
+                "win": "ctrl+n",
+                "linux": "ctrl+n"
+            },
+            {
+                "key": "ctrl+g",
+                "command": "quickFold.oragamiThatShit",
+                "when": "LetsMakePaperCranes",
+                "args": {
+                    "foldCommand": "editor.unfoldAllExcept"
+                },
+                "mac": "cmd+g",
+                "win": "ctrl+g",
+                "linux": "ctrl+g"
+            }
+        ]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.91.0",
+        "@types/mocha": "^10.0.7",
+        "@types/node": "20.x",
+        "eslint": "^8.57.0",
+        "typescript": "^5.4.5",
+        "@vscode/test-cli": "^0.0.9",
+        "@vscode/test-electron": "^2.4.0"
+    }
 }

@@ -10,7 +10,7 @@ function activate(context) {
 
 	const commandKeySymbol = {darwin: "⌘", win32: "Ctrl+", linux: "Ctrl+"}[process.platform]
 
-	const QuickFoldWhenContext = "QuickFoldFocused"
+	const QuickFoldWhenContext = "LetsMakePaperCranes"
 
 	const folds = [
 		{
@@ -72,7 +72,7 @@ function activate(context) {
 			foldPicker.show();
 		}),
 		vscode.commands.registerCommand(
-			"quickFold.select",
+			"quickFold.oragamiThatShit",
 			(args) => {
 			foldPicker.hide();
 
