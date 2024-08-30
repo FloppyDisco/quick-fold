@@ -4,6 +4,7 @@
   "publisher": "bs-code",
   "icon": "images/logo.png",
   "description": "QuickFold is a command that shows a quick picker with only fold commands as choices.",
+  "repository": "https://github.com/FloppyDisco/quick-fold",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.91.0"
