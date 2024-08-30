@@ -1,0 +1,96 @@
+{
+  "name": "QuickFold",
+  "displayName": "QuickFold",
+  "publisher": "bs-code",
+  "description": "QuickFold is a command that shows a quick picker with only fold commands as choices.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+    {
+      "command": "quickFold.showPicker",
+      "title": "Quick Fold"
+    },
+    {
+      "command": "quickFold.select",
+      "title": "Select a quick fold item by keybinding"
+    }
+  ],
+    "keybindings": [
+      {
+        "key": "cmd+e cmd+f",
+        "command": "quickFold.showPicker",
+        "when": "editorTextFocus && foldingEnabled"
+      },
+      {
+        "key": "cmd+f",
+        "command": "quickFold.select",
+        "when": "QuickFoldFocused",
+        "args": {
+          "foldCommand": "editor.foldRecursively"
+        }
+      },
+      {
+        "key": "cmd+a",
+        "command": "quickFold.select",
+        "when": "QuickFoldFocused",
+        "args": {
+          "foldCommand": "editor.foldAll"
+        }
+      },
+      {
+        "key": "cmd+x",
+        "command": "quickFold.select",
+        "when": "QuickFoldFocused",
+        "args": {
+          "foldCommand": "editor.foldAllExcept"
+        }
+      },
+      {
+        "key": "cmd+u",
+        "command": "quickFold.select",
+        "when": "QuickFoldFocused",
+        "args": {
+          "foldCommand": "editor.unfoldRecursively"
+        }
+      },
+      {
+        "key": "cmd+n",
+        "command": "quickFold.select",
+        "when": "QuickFoldFocused",
+        "args": {
+          "foldCommand": "editor.unfoldAll"
+        }
+      },
+      {
+        "key": "cmd+g",
+        "command": "quickFold.select",
+        "when": "QuickFoldFocused",
+        "args": {
+          "foldCommand": "editor.unfoldAllExcept"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.91.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
