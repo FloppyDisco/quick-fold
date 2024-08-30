@@ -8,6 +8,8 @@ let selectionHistory = [];
  */
 function activate(context) {
 
+	const QuickFoldWhenContext = "QuickFoldFocused"
+
 	const folds = [
 		{
 			label: "Fold (⌘F)",
@@ -42,7 +44,7 @@ function activate(context) {
 			"quickFold.showPicker",
 			() => {
 
-			vscode.commands.executeCommand("setContext", "QuickFoldFocused", true);
+			vscode.commands.executeCommand("setContext", QuickFoldWhenContext, true);
 
 			foldPicker = vscode.window.createQuickPick();
 
@@ -51,6 +53,9 @@ function activate(context) {
 			foldPicker.items = reorderFoldsByHistory(folds);
 
 			foldPicker.onDidChangeSelection(([selection]) => {
+
+				// add an option to add additional fold commands to the picker
+
 				vscode.commands.executeCommand(selection.value);
 
 				updateSelectionHistory(selection);
@@ -60,9 +65,8 @@ function activate(context) {
 
 			foldPicker.onDidHide(() =>{
 				foldPicker.dispose()
-				vscode.commands.executeCommand("setContext", "quickFoldVisible", undefined);
+				vscode.commands.executeCommand("setContext", QuickFoldWhenContext, undefined);
 			});
-
 			foldPicker.show();
 		}),
 		vscode.commands.registerCommand(
