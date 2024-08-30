@@ -27,3 +27,6 @@ The extension provides the following commands:
 
 - **`quickFold.showPicker`**: Opens the Quick Pick menu to choose a fold command. Can be reassigned in keyboard shortcuts.
 
+## Coming Soon
+- sort fold commands by recently selected
+- give the user the ability to add additional fold commands to the menu
