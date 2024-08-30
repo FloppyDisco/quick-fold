@@ -2,6 +2,7 @@
   "name": "QuickFold",
   "displayName": "QuickFold",
   "publisher": "bs-code",
+  "icon": "images/logo.png",
   "description": "QuickFold is a command that shows a quick picker with only fold commands as choices.",
   "version": "0.0.1",
   "engines": {
@@ -10,7 +11,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./extension.js",
   "contributes": {
     "commands": [
