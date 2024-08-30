@@ -8,31 +8,33 @@ let selectionHistory = [];
  */
 function activate(context) {
 
+	const commandKeySymbol = {darwin: "⌘", win32: "Ctrl+", linux: "Ctrl+"}[process.platform]
+
 	const QuickFoldWhenContext = "QuickFoldFocused"
 
 	const folds = [
 		{
-			label: "Fold (⌘F)",
+			label: `Fold (${commandKeySymbol}F)`,
 			value: "editor.foldRecursively"
 		},
 		{
-			label: "Fold All (⌘A)",
+			label: `Fold All (${commandKeySymbol}A)`,
 			value: "editor.foldAll"
 		},
 		{
-			label: "Fold All Except Selected (⌘X)",
+			label:`Fold All Except Selected (${commandKeySymbol}X)`,
 			value: "editor.foldAllExcept"
 		},
 		{
-			label: "Unfold (⌘U)",
+			label: `Unfold (${commandKeySymbol}U)`,
 			value: "editor.unfoldRecursively"
 		},
 		{
-			label: "Unfold All (⌘N)",
+			label: `Unfold All (${commandKeySymbol}N)`,
 			value: "editor.unfoldAll"
 		},
 		{
-			label: "Unfold All Except Selected (⌘G)",
+			label: `Unfold All Except Selected(${commandKeySymbol}G)`,
 			value: "editor.unfoldAllExcept"
 		}
 
