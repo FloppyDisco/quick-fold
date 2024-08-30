@@ -29,57 +29,78 @@
     ],
     "keybindings": [
       {
-        "key": "cmd+e cmd+f",
+        "key": "ctrl+e ctrl+f",
         "command": "quickFold.showPicker",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "mac": "cmd+e cmd+f",
+        "win": "ctrl+e ctrl+f",
+        "linux": "ctrl+e ctrl+f"
       },
       {
-        "key": "cmd+f",
+        "key": "ctrl+f",
         "command": "quickFold.select",
         "when": "QuickFoldFocused",
         "args": {
           "foldCommand": "editor.foldRecursively"
-        }
+        },
+        "mac": "cmd+f",
+        "win": "ctrl+f",
+        "linux": "ctrl+f"
       },
       {
-        "key": "cmd+a",
+        "key": "ctrl+a",
         "command": "quickFold.select",
         "when": "QuickFoldFocused",
         "args": {
           "foldCommand": "editor.foldAll"
-        }
+        },
+        "mac": "cmd+a",
+        "win": "ctrl+a",
+        "linux": "ctrl+a"
       },
       {
-        "key": "cmd+x",
+        "key": "ctrl+x",
         "command": "quickFold.select",
         "when": "QuickFoldFocused",
         "args": {
           "foldCommand": "editor.foldAllExcept"
-        }
+        },
+        "mac": "cmd+x",
+        "win": "ctrl+x",
+        "linux": "ctrl+x"
       },
       {
-        "key": "cmd+u",
+        "key": "ctrl+u",
         "command": "quickFold.select",
         "when": "QuickFoldFocused",
         "args": {
           "foldCommand": "editor.unfoldRecursively"
-        }
+        },
+        "mac": "cmd+u",
+        "win": "ctrl+u",
+        "linux": "ctrl+u"
       },
       {
-        "key": "cmd+n",
+        "key": "ctrl+n",
         "command": "quickFold.select",
         "when": "QuickFoldFocused",
         "args": {
           "foldCommand": "editor.unfoldAll"
-        }
+        },
+        "mac": "cmd+n",
+        "win": "ctrl+n",
+        "linux": "ctrl+n"
       },
       {
-        "key": "cmd+g",
+        "key": "ctrl+g",
         "command": "quickFold.select",
         "when": "QuickFoldFocused",
         "args": {
           "foldCommand": "editor.unfoldAllExcept"
-        }
+        },
+        "mac": "cmd+g",
+        "win": "ctrl+g",
+        "linux": "ctrl+g"
       }
     ]
   },
