@@ -1,65 +1,29 @@
-# fold-picker README
+# QuickFold Extension for Visual Studio Code
 
-This is the README for your extension "fold-picker". After writing up a brief description, we recommend including the following sections.
+### tired of remember every keybinding for different types of folds?
 
-## Features
+**QuickFold** is a Visual Studio Code extension that provides a quick pick menu for fold commands.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+this simple extension gives you a visual reminder of fold commands and some keybindings to quickly run them.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+### Quick Pick Menu
+1. press the keybinding to show the FoldPicker. Default is (cmd+e cmd+f). Remember this with the phrase "**E**ditor **F**old"
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+2. **Select a Folding Option**:
+    - Use the Quick Pick menu to choose a folding or unfolding action.
+    - Or press the keybinding listed for each type of fold
+     - **Fold** (⌘F)
+     - **Fold All** (⌘A)
+     - **Fold All Except Selected** (⌘X)
+     - **Unfold** (⌘U)
+     - **Unfold All** (⌘N)
+     - **Unfold All Except Selected** (⌘G)
 
-## Requirements
+## Extension Commands
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+The extension provides the following commands:
 
-## Extension Settings
+- **`quickFold.showPicker`**: Opens the Quick Pick menu to choose a fold command. Can be reassigned in keyboard shortcuts.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
