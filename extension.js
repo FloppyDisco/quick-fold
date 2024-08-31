@@ -1,8 +1,5 @@
 const vscode = require("vscode");
 
-// Maintain a history of recently selected items
-let selectionHistory = [];
-
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -52,16 +49,11 @@ function activate(context) {
 
 			foldPicker.placeholder = "Fold ... ?";
 
-			foldPicker.items = reorderFoldsByHistory(folds);
+			foldPicker.items = folds;
 
 			foldPicker.onDidChangeSelection(([selection]) => {
 
-				// add an option to add additional fold commands to the picker
-
 				vscode.commands.executeCommand(selection.value);
-
-				updateSelectionHistory(selection);
-
 				foldPicker.hide();
 			});
 
@@ -86,49 +78,7 @@ function activate(context) {
 				`)
 			}
 		}),
-
 	] // end of commands
-
-	function reorderFoldsByHistory(items){
-		return items
-		// // Create a new array that will contain reordered items
-		// let reorderedItems = [];
-
-		// // Add recently selected items first
-		// selectionHistory.forEach((label) => {
-		// 	const item = items.find(i => i.label === label);
-		// 	if (item) {
-		// 		reorderedItems.push(item);
-		// 	}
-		// });
-
-		// // Add the rest of the items that are not in the selection history
-		// items.forEach((item) => {
-		// 	if (!selectionHistory.includes(item.label)) {
-		// 		reorderedItems.push(item);
-		// 	}
-		// });
-
-		// return reorderedItems;
-	}
-
-	// Function to update the selection history
-	function updateSelectionHistory(selectedLabel) {
-		// // Remove the item if it already exists in the history to avoid duplicates
-		// const index = selectionHistory.indexOf(selectedLabel);
-		// if (index !== -1) {
-		// 	selectionHistory.splice(index, 1);
-		// }
-
-		// // Add the selected item to the front of the history
-		// selectionHistory.unshift(selectedLabel);
-
-		// // Optionally, limit the history size to a certain number of items
-		// if (selectionHistory.length > 5) {
-		// 	selectionHistory.pop();
-		// }
-	}
-
 
 	context.subscriptions.push(commands);
 } // end of activate
