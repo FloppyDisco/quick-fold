@@ -23,7 +23,7 @@
                 "title": "Quick Fold"
             },
             {
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "title": "Used to select a QuickFold choice using a keybinding"
             }
         ],
@@ -38,7 +38,7 @@
             },
             {
                 "key": "ctrl+f",
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "when": "LetsMakePaperCranes",
                 "args": {
                     "foldCommand": "editor.foldRecursively"
@@ -49,7 +49,7 @@
             },
             {
                 "key": "ctrl+a",
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "when": "LetsMakePaperCranes",
                 "args": {
                     "foldCommand": "editor.foldAll"
@@ -60,7 +60,7 @@
             },
             {
                 "key": "ctrl+x",
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "when": "LetsMakePaperCranes",
                 "args": {
                     "foldCommand": "editor.foldAllExcept"
@@ -71,7 +71,7 @@
             },
             {
                 "key": "ctrl+u",
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "when": "LetsMakePaperCranes",
                 "args": {
                     "foldCommand": "editor.unfoldRecursively"
@@ -82,7 +82,7 @@
             },
             {
                 "key": "ctrl+n",
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "when": "LetsMakePaperCranes",
                 "args": {
                     "foldCommand": "editor.unfoldAll"
@@ -93,7 +93,7 @@
             },
             {
                 "key": "ctrl+g",
-                "command": "quickFold.oragamiThatShit",
+                "command": "quickFold.origamiThatShit",
                 "when": "LetsMakePaperCranes",
                 "args": {
                     "foldCommand": "editor.unfoldAllExcept"
