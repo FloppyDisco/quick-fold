@@ -34,7 +34,7 @@ function activate(context) {
 			value: "editor.unfoldAll"
 		},
 		{
-			label: `Unfold All Except Selected(${commandKeySymbol}G)`,
+			label: `Unfold All Except Selected (${commandKeySymbol}G)`,
 			value: "editor.unfoldAllExcept"
 		}
 
@@ -72,7 +72,7 @@ function activate(context) {
 			foldPicker.show();
 		}),
 		vscode.commands.registerCommand(
-			"quickFold.oragamiThatShit",
+			"quickFold.origamiThatShit",
 			(args) => {
 			foldPicker.hide();
 
